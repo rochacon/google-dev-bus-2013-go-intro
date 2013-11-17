@@ -1,0 +1,67 @@
+Introdução a Go
+
+Rodrigo Chacon
+Desenvolvedor @ Titans Group
+@rochacon
+
+* Por que Go?
+
+TODO
+
+* Features
+
+- Simplicidade
+- Sistema de tipos simples
+- Ferramentas 
+- Rápido
+- Modelo assincrono
+- Batteries included
+- Deployment fácil
+
+* Hello world
+
+.play ./code/hello.go
+
+* 
+
+* Servidor HTTP
+
+- DoS hardened
+- Serve o conteúdo do dl.google.com
+
+.play ./code/http-server.go
+
+* Modelo assincrono
+
+- Goroutines
+- Channels
+- *sync* package
+
+* Modelo assincrono: channels (1/2)
+
+.play ./code/async1.go
+
+* Modelo assincrono: channels (2/2)
+
+.play ./code/async2.go
+
+* Modelo assincrono: exemplo 3
+
+.play ./code/async3.go
+
+* Modelo assincrono: exemplo 4
+
+.play ./code/async4.go
+
+* Casos de sucesso 
+
+- Docker
+- JuJu
+- Tsuru
+- Camlistore
+
+TODO add more
+
+* Dúvidas?
+
+TODO add fun image
