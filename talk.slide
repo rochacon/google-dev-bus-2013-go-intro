@@ -10,15 +10,17 @@ Go foi criado devido a frustração com as linguagens e ambientes existentes na 
 O desejo e primeiras ideias de uma nova linguagem começaram em Setembro de 2007 por Robert Griesemer, Rob Pike e Ken Thompson.
 Go alcançou seu primeiro release em 10 de Novembro de 2009.
 
+* 
+
+.image ./images/compiling.png
+
 * Por que Go?
 
 O objetivo de Go é combinar a facilidade de programação de linguagens de tipagem dinâmica (e.g Python) com a eficiência e segurança de linguagens de tipagem estática. Com um bom suporte a networking e multicore.
 
 Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segundos.
 
-* Resumão
-
-Go é:
+* Go é
 
 - Compilado
 - Tipado estáticamente
@@ -26,6 +28,7 @@ Go é:
 - Sistema de tipos simples
 - Concurrency primitives
 - Batteries included
+- Garbage collected
 - Ferramentas 
 - Deployment fácil
 - Open source
@@ -50,8 +53,9 @@ Go é:
 - go doc
 - go fmt
 - go fix
+- go get
 - go test (na versão 1.2 também adiciona coverage)
-- muito mais
+- go help para ver os demais comandos =P
 
 * Servidor HTTP
 
