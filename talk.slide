@@ -60,6 +60,10 @@ Go é:
 
 .play ./code/http-server.go
 
+* Testing
+
+TODO
+
 * Concurrency
 
 - Goroutines
@@ -75,6 +79,7 @@ Para rodar uma função em uma nova Goroutine, coloque `go` antes da chamada da 
 
 * Concurrency: channels
 
+FIXME
 Channels são 
 
 .play ./code/async1.go
