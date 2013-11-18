@@ -19,7 +19,7 @@ Go conta com mais de 400 contribuidores.
 
 * Por que Go?
 
-O objetivo de Go é combinar a facilidade de programação de linguagens de tipagem dinâmica (e.g Python) com a eficiência e segurança de linguagens de tipagem estática. Com um bom suporte a networking e multicore.
+O objetivo de Go é combinar a facilidade de programação de linguagens de tipagem dinâmica com a eficiência e segurança de linguagens de tipagem estática. Com um bom suporte a networking e multicore.
 
 Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segundos.
 
