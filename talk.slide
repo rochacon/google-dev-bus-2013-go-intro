@@ -1,28 +1,57 @@
 Introdução a Go
 
 Rodrigo Chacon
-Desenvolvedor @ Titans Group
+Desenvolvedor no Titans Group
 @rochacon
+
+* Um pouco de história
+
+Go foi criado devido a frustração com as linguagens e ambientes existentes na época (~2008). Programar se tornou dificil e parte do problema eram as linguagens disponiveis.
+O desejo e primeiras ideias de uma nova linguagem começaram em Setembro de 2007 por Robert Griesemer, Rob Pike e Ken Thompson.
+Go alcançou seu primeiro release em 10 de Novembro de 2009.
 
 * Por que Go?
 
-TODO
+O objetivo de Go é combinar a facilidade de programação de linguagens de tipagem dinâmica (e.g Python) com a eficiência e segurança de linguagens de tipagem estática. Com um bom suporte a networking e multicore.
 
-* Features
+Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segundos.
 
-- Simplicidade
+* Resumão
+
+Go é:
+
+- Compilado
+- Tipado estáticamente
+- Sintaxe simples e limpa
 - Sistema de tipos simples
-- Ferramentas 
-- Rápido
-- Modelo assincrono
+- Concurrency primitives
 - Batteries included
+- Ferramentas 
 - Deployment fácil
+- Open source
+
+* Quem está usando Go?
+
+- Docker (dotCloud)
+- JuJu (Canonical)
+- Tsuru (Globo.com)
+- Heroku
+- Mozilla
+- CloudFlare
+- Bit.ly
+- SoundCloud
 
 * Hello world
 
 .play ./code/hello.go
 
-* 
+* Tooling
+
+- go doc
+- go fmt
+- go fix
+- go test (na versão 1.2 também adiciona coverage)
+- muito mais
 
 * Servidor HTTP
 
@@ -31,37 +60,40 @@ TODO
 
 .play ./code/http-server.go
 
-* Modelo assincrono
+* Concurrency
 
 - Goroutines
 - Channels
 - *sync* package
 
-* Modelo assincrono: channels (1/2)
+* Goroutines
+
+Goroutines são *lightweight threads* gerenciadas pelo runtime do Go.
+Para rodar uma função em uma nova Goroutine, coloque `go` antes da chamada da função.
+
+.play ./code/goroutines.go
+
+* Concurrency: channels
+
+Channels são 
 
 .play ./code/async1.go
 
-* Modelo assincrono: channels (2/2)
 
-.play ./code/async2.go
+* Concurrency: sync package
 
-* Modelo assincrono: exemplo 3
+.play ./code/sync.go
 
-.play ./code/async3.go
+* FIXME Go no Brasil?
 
-* Modelo assincrono: exemplo 4
-
-.play ./code/async4.go
-
-* Casos de sucesso 
-
-- Docker
-- JuJu
-- Tsuru
-- Camlistore
-
-TODO add more
+TODO
 
 * Dúvidas?
 
 TODO add fun image
+
+* Links
+
+- golang.org
+- talks.golang.org
+
