@@ -6,7 +6,7 @@ Desenvolvedor no Titans Group
 
 * Um pouco de história
 
-Go foi criado devido a frustração com as linguagens e ambientes existentes na época (~2008). Programar se tornou dificil e parte do problema eram as linguagens disponiveis.
+Go foi criado devido a frustração com as linguagens e ambientes existentes na época (final de 2007). Programar se tornou dificil e parte do problema eram as linguagens disponiveis.
 O desejo e primeiras ideias de uma nova linguagem começaram em Setembro de 2007 por Robert Griesemer, Rob Pike e Ken Thompson.
 
 A versão 1.0 de Go foi lançada em 10 de Novembro de 2009.
@@ -19,11 +19,13 @@ Go conta com mais de 400 contribuidores.
 
 * Por que Go?
 
-O objetivo de Go é combinar a facilidade de programação de linguagens de tipagem dinâmica com a eficiência e segurança de linguagens de tipagem estática. Com um bom suporte a networking e multicore.
+Afinal, por que escrever uma nova linguagem?
+
+O objetivo de Go é combinar a facilidade de programação de linguagens de tipagem dinâmica com a eficiência e segurança de linguagens de tipagem estática, bom suporte a networking e multicore.
 
 Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segundos.
 
-* Go é
+* Go em poucas palavras
 
 - Compilado
 - Tipado estáticamente
@@ -32,7 +34,7 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 - Concurrency primitives
 - Batteries included
 - Garbage collected
-- Ferramentas 
+- Ótimas ferramentas
 - Deployment fácil
 - Open source
 
@@ -51,7 +53,7 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 
 .play ./code/hello.go
 
-* Tooling
+* Go tools
 
 - go doc
 - go fmt
@@ -69,7 +71,10 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 
 * Testing
 
-TODO
+O comando `go` `test` irá buscar todos os arquivos com o pattern `*_test.go` e executará as funções que começam com `Test`.
+
+.code ./code/testing_test.go /START0/,/STOP0/
+.code ./code/testing_test.go /START1/,/STOP1/
 
 * Concurrency
 
@@ -79,22 +84,31 @@ TODO
 
 * Goroutines
 
-Goroutines são *lightweight threads* gerenciadas pelo runtime do Go.
-Para rodar uma função em uma nova Goroutine, coloque `go` antes da chamada da função.
+Goroutines são _lightweight_ _threads_ gerenciadas pelo runtime do Go.
+Para rodar uma função em uma nova Goroutine, coloque *go* antes da chamada da função.
 
 .play ./code/goroutines.go
 
-* Concurrency: channels
+* Channels
 
-FIXME
-Channels são 
+Channels são *pipes* _tipados_ para comunicação entre goroutines. É possível enviar e receber valores de uma goroutine para outra.
 
-.play ./code/async1.go
+.code ./code/channels.go /START1/,/STOP1/
 
+* Channels
 
-* Concurrency: sync package
+.play ./code/channels.go /START0/,/STOP0/
 
-.play ./code/sync.go
+* sync package
+
+O pacote *sync* contém tipos básicos para lidar com concorrência, como *mutex* *locks*.
+
+.code ./code/sync.go /STARTCOUNTER/,/STOPCOUNTER/
+.code ./code/sync.go /STARTCHECK/,/STOPCHECK/
+
+* sync package
+
+.play ./code/sync.go /STARTMAIN/,/STOPMAIN/
 
 * FIXME Go no Brasil?
 
@@ -102,7 +116,7 @@ TODO
 
 * Dúvidas?
 
-TODO add fun image
+.image ./images/gophermega.jpg
 
 * Links
 

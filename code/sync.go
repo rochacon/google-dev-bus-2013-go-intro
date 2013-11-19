@@ -1,30 +1,51 @@
+// +build OMIT
 package main
 
 import (
-    "fmt"
-    "sync"
+	"fmt"
+	"net/http"
+	"sync"
 )
 
-var Counter struct {
-    sync.RWMutex
-    x int
+// STARTCOUNTER OMIT
+var SuccessCounter struct {
+	sync.Mutex
+	x int
 }
 
+// STOPCOUNTER OMIT
+
+// STARTMAIN OMIT
 func main() {
-    wg := &sync.WaitGroup{}
-    wg.Add(3)
-    go sum(wg)
-    go sum(wg)
-    go sum(wg)
-    wg.Wait()
-    fmt.Println("x =", Counter.x)
+	urls := []string{
+		"http://google.com",
+		"http://golang.org",
+		"http://github.com/rochacon",
+	}
+	wg := &sync.WaitGroup{}
+	wg.Add(len(urls))
+	for _, url := range urls {
+		go checkHealth(wg, url)
+	}
+	wg.Wait()
+	fmt.Println(SuccessCounter.x, "Successfully hitted URLs")
+	fmt.Println(len(urls)-SuccessCounter.x, "Failed hits")
 }
 
-func sum(wg *sync.WaitGroup) {
-    for x := 0; x < 10; x++ {
-        Counter.Lock()
-        Counter.x++
-        Counter.Unlock()
-    }
-    wg.Done()
+// STOPMAIN OMIT
+
+// STARTCHECK OMIT
+func checkHealth(wg *sync.WaitGroup, url string) {
+	r, err := http.Get(url)
+	if err != nil {
+		return
+	}
+	if r.StatusCode == http.StatusOK {
+		SuccessCounter.Lock()
+		SuccessCounter.x++
+		SuccessCounter.Unlock()
+	}
+	wg.Done()
 }
+
+// STOPCHECK OMIT
