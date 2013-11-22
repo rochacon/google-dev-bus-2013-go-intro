@@ -97,7 +97,7 @@ Métodos só podem ser declarados para os tipos definidos pelo usuário.
 
 * Interfaces
 
-Interface são coleções de assinaturas de métodos.
+Interfaces são coleções de assinaturas de métodos.
 
 .code ./code/interfaces.go /START0/,/STOP0/
 
