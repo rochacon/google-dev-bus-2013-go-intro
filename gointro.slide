@@ -53,7 +53,69 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 
 .play ./code/hello.go
 
+* A linguagem Go
+
+* Sistemas de tipos
+
+Go é estaticamente tipado, mas conta com inferência de tipos.
+
+    var x int = 1
+    var y int32 = 2
+    c := x + 3  // OK
+    d := x + y  // Fail, type mismatch int and int32
+
+* Builtin types (alguns)
+
+- bool
+- int, int8, int16, int32, int64
+- uint, uint8, uint16, uint32, uint64
+- float, float32, float64
+- string
+- error
+- array
+- slice
+- map
+- struct
+- interface
+- channel
+
+* Orientação a objetos
+
+- Go não tem classes, mas pode-se definir métodos para tipos
+- Go não tem herança, mas é possível combinar tipos usando Composição 
+- Interfaces
+
+* Métodos
+
+Métodos só podem ser declarados para os tipos definidos pelo usuário.
+
+.play ./code/oo.go
+
+* Composição
+
+.play ./code/composition.go /START0/,/STOP0/
+
+* Interfaces
+
+Interface são coleções de assinaturas de métodos.
+
+.code ./code/interfaces.go /START0/,/STOP0/
+
+Um tipo que define a interface `Stringer`.
+
+.code ./code/interfaces.go /START1/,/STOP1/
+
+.code ./code/interfaces.go /START2/,/STOP2/
+
+* Erros
+
+Go não tem exceções, então erros devem ser tratados localmente.
+
+.play ./code/errors.go
+
 * Go tools
+
+* Principais ferramentas
 
 - go build – compila pacotes e suas dependências
 - go doc – gera, printa e serve a documentação de pacotes
@@ -64,12 +126,7 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 - go run – compila e roda um app
 - go help para ver os demais comandos =P
 
-* Sistemas de tipos
-
-* Orientação a objetos
-
-* 
-
+* Standard library
 
 * net/http
 
@@ -84,6 +141,8 @@ O comando `go` `test` irá buscar todos os arquivos com o pattern `*_test.go` e 
 
 .code ./code/testing_test.go /START0/,/STOP0/
 .code ./code/testing_test.go /START1/,/STOP1/
+
+* Concorrência
 
 * Concurrency
 
@@ -101,6 +160,8 @@ Para rodar uma função em uma nova Goroutine, coloque *go* antes da chamada da 
 * Channels
 
 Channels são *pipes* _tipados_ para comunicação entre goroutines. É possível enviar e receber valores de uma goroutine para outra.
+
+"Don't communicate by sharing memory; share memory by communicating."
 
 .code ./code/channels.go /START1/,/STOP1/
 
