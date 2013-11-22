@@ -11,7 +11,7 @@ O desejo e primeiras ideias de uma nova linguagem começaram em Setembro de 2007
 
 A versão 1.0 de Go foi lançada em 10 de Novembro de 2009.
 
-Go conta com mais de 400 contribuidores.
+Go já conta com mais de 400 contribuidores.
 
 * 
 
@@ -55,14 +55,23 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 
 * Go tools
 
-- go doc
-- go fmt
-- go fix
-- go get
-- go test (na versão 1.2 também adiciona coverage)
+- go build – compila pacotes e suas dependências
+- go doc – gera, printa e serve a documentação de pacotes
+- go fmt – formata e refatora seu código
+- go fix – ajusta seu código para sintaxe da nova versão
+- go get – gerenciador de pacotes, instala pacotes e dependências
+- go test – rodas os testes (na versão 1.2 também tem coverage)
+- go run – compila e roda um app
 - go help para ver os demais comandos =P
 
-* Servidor HTTP
+* Sistemas de tipos
+
+* Orientação a objetos
+
+* 
+
+
+* net/http
 
 - DoS hardened
 - Serve o conteúdo do dl.google.com
@@ -109,10 +118,6 @@ O pacote *sync* contém tipos básicos para lidar com concorrência, como *mutex
 * sync package
 
 .play ./code/sync.go /STARTMAIN/,/STOPMAIN/
-
-* FIXME Go no Brasil?
-
-TODO
 
 * Dúvidas?
 
