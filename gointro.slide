@@ -49,11 +49,11 @@ Go também deve ser rápido! Deve ser capaz de compilar projetos grandes em segu
 - Bit.ly
 - SoundCloud
 
-* Hello world
+* A linguagem Go
+
+* Hello Go
 
 .play ./code/hello.go
-
-* A linguagem Go
 
 * Sistemas de tipos
 
