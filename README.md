@@ -1,5 +1,3 @@
-# google-dev-bus-2013-go-intro
-
 Slides do talk de introdução a Go no Google Developer Bus 2013 Brasil
 
 
